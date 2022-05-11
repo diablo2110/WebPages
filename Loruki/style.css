@@ -1,0 +1,512 @@
+@import url('https://fonts.googleapis.com/css2?family=Hurricane&family=Montserrat:ital,wght@0,400;0,500;0,700;1,200&display=swap');
+
+:root{
+    --primary-color:#047aed;   /*  varijabla za konstantnu boju da je lakse koristit */ 
+    --secondary-color:#1c3fa8;   
+    --dark-color:#002240;
+    --light-color: #f4f4f4;
+    --succes-color:#5cb85c;
+    --error-color:#d9534f;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;                  /*  za pocetak svake stranice da nema margina   */
+}
+
+
+body {
+    font-family: 'lato', sans-serif;
+    color: #333;                        /* fontovi koji se koriste  */
+    line-height: 1.6;
+}
+
+ul {
+    list-style: none;
+
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+h1, h2{
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+
+}
+p{
+    margin: 10px 0;
+}
+img {
+    width: 100%;
+}
+
+code, pre{
+    background: #333;
+    color: #ffff;       /* boja u crno djeove texta */
+    padding: 10px;
+}
+
+
+
+
+
+
+/* <<<< NAVBAR >>>>  */
+.navbar {
+    background-color:var(--primary-color);
+    color: #ffff;
+    height: 70px;
+    
+    
+}
+.navbar ul{
+    display: flex;
+    
+}
+.navbar a {
+    color: #ffff;
+    padding: 10px;
+    margin: 0 5px;
+
+}
+ .navbar a:hover{
+     border-bottom: 2px #ffff solid;
+ }
+.navbar .flex {
+    justify-content: space-between;
+}
+
+
+/* <<<< SHOWCASE ILI HERO  >>>>  */
+.showcase{
+    height: 400px;
+    background-color: var(--primary-color);
+    color: #ffff;
+    position: relative;
+}
+
+.showcase h1{
+    font-size: 40px;
+
+}
+.showcase p{
+    margin: 20px 0;
+}
+
+.showcase-form{
+    position: relative;
+    top: 60px;
+    height: 350px;      /* uredivanje forme za upis */
+    width: 400px;
+    padding: 40px;
+    z-index: 100;
+    animation: slideInFromRight 1s ease-in;
+}
+
+.showcase-text{
+animation: slideInFromLeft 1s ease-in;
+}
+
+
+
+.showcase-form .form-control{
+    margin:30px 0;
+    
+}
+.showcase-form input[type='text'],
+.showcase-form input[type='email']{
+    border: 0;
+    border-bottom: 1px solid #b4becb;   /* uredivanje forme za upis */
+    width: 100%;
+    padding: 3px;                           /* da izgelda fora  */
+    font-size: 16px;
+
+}
+.showcase-form input:focus{
+    outline: none;
+}
+
+.showcase::before,
+.showcase::after{
+
+    content: "";
+    position: absolute;          /* posto je showcase relative */
+    height: 100px;               /* ovaj je absolute nalazi se ispod plavog */
+    bottom: -70px;
+    right: 0;               /* ovaj dio daje krivu bijelu crtu */
+    left: 0;
+    transform: skewY(-3deg);        /* da se nakrivi dio  */
+    background:#ffff
+    
+}
+
+.showcase .grid{
+    overflow: visible;   /* da se kartica ide preako plavog dijela  */
+ grid-template-columns: 52% 41%;   /* sirina grida jos pogledati kako ide*/
+  gap:30px;                         /* razmak izmedu kartica  */
+}
+
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;                              /* postavljanje kolumni ( mreze)  */
+    justify-content: center;                /* uzeti taj dio iz bootstrapa  */
+    align-items: center;
+    height: 100%;
+
+}
+.grid-3{
+    grid-template-columns: repeat(3, 1fr); 
+}
+
+
+/* <<<< STATS >>>> */
+
+.stats{
+    padding-top: 100px;
+}
+
+.container h3.stats-heading{
+   
+    max-width: 500px;
+    margin: auto;
+   
+}
+.text-center{
+    text-align: center;
+}
+
+.stats .grid h3{
+    font-size: 35px;
+
+}
+.stats.grid p{
+font-size: 20px;
+font-weight: bold;
+}
+
+/* <<<< CLI >>>> */
+
+.cli .grid{
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows:  repeat(2,1fr);
+}
+.cli .grid > *:first-child{    /* radi ovoga se sada slika  */ 
+    grid-column: 1 / span 2;   /* rasteze u dva reda primjer: img cli u 2 reda  */ 
+    grid-row:  1 / span 2; 
+}
+
+/* <<<< CLOUD >>>> */
+
+.cloud .grid{
+    grid-template-columns:  4fr 3fr;
+}
+
+/* <<<< LANGUAGES >>>> */
+.languages .flex{
+
+flex-wrap: wrap; /*skupi ikone da idu jedna ispod druge */
+
+}
+.languages .card{
+    text-align: center;
+    margin: 18px 10px 40px;             /* */
+    transition:transform 0.2s ease-in;  /* radi ovoga idu polako gori/doli */
+}
+
+.languages .card h4{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.languages .card:hover{
+    transform: translateY(-15px);       /* radi ovoga idu polako gori/doli -15 znaci gore po Y osi */
+}
+
+/* <<<< FOOTER >>>> */
+
+
+.footer  a{
+    color: #ffff;
+}
+.social a{
+margin: 0px 10px;
+
+}
+
+
+
+/* <<<< MARGINS >>>> */
+.my-1{
+    margin: 1rem 0;
+}
+.my-2{
+    margin: 1.5rem 0;
+}
+
+.my-3{
+    margin: 2rem 0;
+}
+
+.my-4{
+    margin: 3rem 0;
+}
+
+.my-5{
+    margin: 4rem 0;
+}
+
+.m-1{
+    margin: 1rem;
+}
+.m-2{
+    margin: 1.5rem;
+}
+
+.m-3{
+    margin: 2rem;
+}
+
+.m-4{
+    margin: 3rem;
+}
+
+.m-5{
+    margin: 4rem;
+}
+
+
+/* <<<< PADDING >>>> */
+
+.py-1{
+    padding: 1rem 0;
+}
+.py-2{
+    padding: 1.5rem 0;
+}
+
+.py-3{
+    padding: 2rem 0;
+}
+
+.py-4{
+    padding: 3rem 0;
+}
+
+.py-5{
+    padding: 4rem 0;
+}
+
+
+.p-1{
+    padding: 1rem 0;
+}
+.p-2{
+    padding: 1.5rem 0;
+}
+
+.p-3{
+    padding: 2rem 0;
+}
+
+.p-4{
+    padding: 3rem 0;
+}
+
+.p-5{
+    padding: 4rem 0;
+}
+
+
+
+/* <<<< FEATURES >>>> */
+
+.features-head{
+    padding-bottom: 0px;
+}
+.features-head img, 
+.features-sub-head img,.docs-head img{
+    width: 200px;
+    justify-self: flex-end;
+}
+
+.features-main .grid{
+   padding: 30px;
+}
+/* .cli .grid > *:first-child{   
+    grid-column: 1 / span 2;   
+    grid-row:  1 / span 2; 
+}
+*/
+.features-main .grid >*:first-child{
+    grid-column: 1/ span 2;
+}
+
+
+
+
+/*DOCS*/
+
+.docs-main h3{
+    margin: 20px 0;
+}
+.docs-main .grid{
+    grid-template-columns: 1fr 2fr;
+    align-items: flex-start;
+}
+
+.docs-main nav li{
+    font-size: 17px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px #ccc solid;
+
+}
+.docs-main nav li:hover{
+    font-weight: bolder;
+}
+
+.stats{
+    animation: slideInFromBottom 1s ease-in;
+}
+
+
+/****** ANIMATIONS ***********/
+
+@keyframes slideInFromLeft {
+    0%{
+        transform:translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes slideInFromRight {
+    0%{
+        transform:translateX(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+
+
+@keyframes slideInFromTop {
+    0%{
+        transform:translateY(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    0%{
+        transform:translateY(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************** TABLETS & MOBILE ***************/
+
+
+
+
+
+
+/* TABLETS & UNDER */
+
+@media(max-width: 768px){
+
+    .grid, .stats.grid, 
+    .showcase .grid,
+    .cli .grid,
+    .cloud .grid,
+    .features-main .grid,
+    .docs-main .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+}
+.showcase{
+    height: auto;
+    
+}
+.showcase-text{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.showcase-form{
+    justify-self: center; /* koristi se da se poravana samo dio koji na koji se odnosi */
+    animation: slideInFromBottom 1s ease-in ;
+}
+.cli .grid > *:first-child
+    {    
+  grid-column: 1;  
+    grid-row: 1;
+}
+
+
+.features-head , 
+.features-sub-head ,
+.docs-head {
+   
+   text-align: center;
+}
+
+.features-head img, 
+.features-sub-head img,
+.docs-head img{
+    width: 100px;
+    justify-self: center;
+}
+
+.features-main .grid> *.first-child,
+.features-main .grid > *:nth-child(1){   /* sve kartice u jedan red*/
+    grid-column: 1;
+}
+
+
+
+
+/* MOBILE */
+
+@media(max-width: 500px){
+    .navbar{
+        height: 110px;
+    }
+    .navbar .flex{
+        flex-direction: column;  
+    }
+    .navbar ul{
+        padding: 10px;
+        background-color: rgba(0,0,0,0.1)
+    }
+    .features-head img, 
+.features-sub-head img{
+    
+    justify-self: center;
+}
+}

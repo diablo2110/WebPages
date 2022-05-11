@@ -1,0 +1,135 @@
+/* <<<< UTILITIES >>>> */
+.container {
+    max-width:  1100px;
+    margin:  0 auto;
+    overflow:  auto;        /*klasa koja drzi sve na okupu  */
+    padding: 0 40px;
+}
+.card{
+    background-color: #ffff;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0, 0.2);  /* kartice da se bolje vidi */
+    padding: 20px;                                 /* daje sjenu boxu tj kartici */
+    margin: 10px;                               /* pogledati u bootstrap */
+}
+
+.btn{
+    display: inline-block;
+    padding: 10px 30px;
+    cursor: pointer;
+    background-color: var(--primary-color);  /* ureduje buttone  */
+    color: #ffff;
+    border: none;
+    border-radius: 5px;
+
+}
+.btn:hover{
+    transform: scale(0.9 );  /*  efekt smanjivanja buttona  */
+}
+
+.btn-outline{
+    background-color: transparent;  /*za READ MORE button postavke  */
+    border: 1px #ffff solid;
+}
+.flex {
+    display: flex;
+    justify-content: center;        /* postavalja kontent u centar */
+    align-items: center;            /* pogledaj koja je to klasa*/
+    height: 100%;
+  
+
+}
+
+
+/* <<<< ALLERT>>>> */
+
+.alert{
+    background-color: var(--light-color);
+    padding: 10px 20px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+.alert i{
+    margin-right:  10px;
+
+}
+
+.alert-succes{
+    background-color: var(--succes-color);      /* boji dio teksta u zeleno  */
+    color: #fff;
+    
+}
+
+.alert.error{
+    
+        background-color: var(--error-color);  /* boji dio teksta u crveno   */
+        color: #fff;
+        
+    }
+
+
+
+
+
+/* <<<< BACKGROUNDS & COLORED BUTTONS >>>> */
+
+.bg-primary, .btn-primary{
+    background-color: var(--primary-color);
+    color: #ffff;
+}
+
+.bg-secondary, .btn-secondary{
+    background-color: var(--secondary-color);
+    color: #ffff;
+}
+.bg-dark, .btn-dark{
+    background-color: var(--dark-color);
+    color: #fff;
+}
+.bg-light, .btn-light{
+    background-color: var(--light-color);
+    color: #333;
+}
+
+
+/* <<<<<<   TEXT SIZES >>>>>   */
+.lead{
+    font-size: 20px;
+}
+
+.sm{
+    font-size:1 rem ;
+}
+
+.md{
+    font-size: 2rem;
+}
+
+.lg{
+    font-size: 3rem;
+}
+.xl{
+    font-size: 4rem;
+}
+
+
+/* TEXT  COLOR */
+.text-primary{
+    color: var(--primary-color);
+  
+}
+
+.text-secondary{
+    background-color: var(--secondary-color);
+    color: #fff;
+    
+}
+.text-dark{
+    background-color: var(--dark-color);
+   
+}
+.text-light{
+    background-color: var(--light-color);
+    
+}
